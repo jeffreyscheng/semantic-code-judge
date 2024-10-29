@@ -1,0 +1,11 @@
+To find the most common number, we should assign a count to every unique number encountered,
+and then perform some sort of max operation.
+The candidate solution assigns counts using the built-in Counter library.
+The count assignment functionality is likely correct since Python's standard library has a large user base and is usually bug-free.
+We now check the syntax of counter.most_common(1)[0][0]
+Since counter.most_common returns a list of the n most common elements and their counts from the most common to the least,
+counter.most_common(1) returns a list with one tuple (the most common element and its count).
+Then counter.most_common(1)[0] indexes into this list to grab the only tuple,
+and counter.most_common(1)[0][0] indexes into this tuple to grab the most common element (not its count).
+This is the desired behavior.
+Therefore, the candidate solution is CORRECT.

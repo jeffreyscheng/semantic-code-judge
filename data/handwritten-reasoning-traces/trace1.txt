@@ -1,0 +1,15 @@
+To remove duplicates characters after their first occurrence,
+we need to iterate through the string and determine whether it's the first time we've seen a character.
+If it is, we add it to the result string.
+If it's not, we skip it.
+
+The candidate solution uses a set `seen_characters` to keep track of seen characters.
+This is data structure islikely correct since sets are a Python built-in, and it is likely
+efficient since sets have O(1) average time complexity for lookups.
+The for loop iterates through each character correctly since the default order is left-to-right, which is the same order
+we use to determine whether a character has been seen for teh first time.
+Inside the for loop, the condition `if character not in seen_characters:` looks like correct syntax.
+When that is true, `seen_characters.add(character)` is the desired behavior since we want to know this character has been seen for future duplicates.
+The next line `output_characters.append(character)` is the desired behavior since we want to add only the first occurence of each character to the result.
+The final return statement `return ''.join(output_characters)` correctly converts the list of characters to a string.
+Therefore, the candidate solution is CORRECT.
